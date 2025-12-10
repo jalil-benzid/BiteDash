@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>BITEDASH</title> 
+    
+    <meta name="description" content="BiteDash landing page">
+    <meta name="keywords" content="food, delivery, mobile app, website">
+    <meta name="author" content="Benzid Ahmed Abdeldjalil">
+    <meta property="og:title" content="BITEDASH – Fast Food Delivery">
+    <meta property="og:description" content="Fast, clean, and user-friendly food delivery app. Order what you love instantly.">
+    <!-- <meta property="og:image" content="images/preview.png"> -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https://thewebsite.com"> -->
+    <meta name="theme-color" content="#EB0029">
+    <!-- <meta name="twitter:card" content="summary_large_image"> -->
+    <meta name="twitter:title" content="BITEDASH – Fast Food Delivery">
+    <meta name="twitter:description" content="Order your favorites instantly. Fast and clean food delivery.">
+    <!-- <link rel="canonical" href="https://thewebsite.com"> -->
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="index.js" defer></script>
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 </head>
 
@@ -23,18 +44,20 @@
             <h3 class="h3-logo">BiteDash</h3>
         </div>
 
-        <div class="middle-head">
-            <a href="#">Why BD?</a>
+        <nav class="middle-head">
+            <a href="#why-bd">Why BD?</a>
             <a href="#">Services</a>
             <a href="#">Menu</a>
             <a href="#">Work</a>
-        </div>
+        </nav>
 
         <div class="end-head">
             <button class="contact-btn"><i class="fa-regular fa-envelope"></i> Contact</button>
         </div>
     </header>
 
+    <main>
+        
     <section class="hero-section">
 
         <div class="left-hero">
@@ -45,7 +68,7 @@
 
             <h1 class="hero-title">Claim Best Offer on Fast <span>Food</span> & <span>Restaurants</span></h1>
 
-            <h4 class="hero-des">Our job is to filling your tummy with delicious food and with fast and free delivery</h4>
+            <h4 class="hero-des">Our job is to fill your tummy with delicious food</h4>
 
             <div class="explore">
                 <a href="#" class="hero-start-btn">Get Started</a>
@@ -67,7 +90,7 @@
                 <div class="name-des">
                     <div>
                         <div class="name">Richard Watson</div>
-                        <div class="des">Fooc Courier</div>
+                        <div class="des">Food Courier</div>
                     </div>
                     <i class="fas fa-phone-alt"></i> 
                 </div>
@@ -91,32 +114,84 @@
 
     </section>
     
-    <section class="why-db">
+    <section class="why-db" id="why-bd">
         <h4>WHAT WE SERVE</h4>
 
         <h2>Your Favourite Food Delivery Partner</h2>
 
         <div class="images">
             <div class="im1">
-                <img src="./assets/sec1-im1.webp" alt="">
+                <img src="./assets/sec1-im1.webp" alt="Ordering food easily on BiteDash">
                 <div class="title-im">Easy To Order</div>
                 <div class="des-im">You only need a few steps in ordering food</div>
             </div>            
 
             <div class="im2">
-                <img src="./assets/sec1-im2.webp" alt="">
+                <img src="./assets/sec1-im2.webp" alt="Fast delivering on BitDash">
                 <div class="title-im">Fastest Delivery</div>
-                <div class="des-im">Delivery that is always ontime even faster</div>
+                <div class="des-im">Delivery that is always on time even faster</div>
             </div>            
 
             <div class="im3">
-                <img src="./assets/sec1-im3.webp" alt="">
+                <img src="./assets/sec1-im3.webp" alt="Hight Quality food on BiteDash">
                 <div class="title-im">Best Quality</div>
-                <div class="des-im">Not only fast for us quality is also number one</div>
+                <div class="des-im">Not only fast—quality is also our number one priority</div>
             </div>            
 
         </div>
     </section>
+
+    <section class="about-us" >
+        <div class="left-about-us">
+            <img class="chef" src="./assets/chef.webp" alt="chef">
+            <div class="reviews">
+            <div>Our Reviewers</div>
+
+            <div class="reviews-slack">
+                <img src="./assets/review-women.png" alt="women">
+                <img src="./assets/review-women-2.png" alt="women">
+                <img src="./assets/review-women-3.png" alt="women">
+                <div class="circle">12k+</div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="right-about-us">
+            <h4>WHAT THEY SAY</h4>
+            <h2>What Our Customers Say About Us</h2>
+            <p>“BiteDash is the best. Besides the many and delicious meals, the service is also very good, especially in the very fast delivey. I highly recommend  to BiteDash you”.</p>
+
+            <div class="review">
+                <img src="./assets/review-women.png" alt="women">
+                <div class="review-info">
+                    <div class="review-name">Theresa Jordan</div>
+                    <div class="review-job">Food Enthusiast</div>
+                </div>
+            </div>
+
+
+            <div class="review-rate">
+            <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+
+            <span>4.8</span>
+            </div>
+
+        </div>
+    </section>
+
+    </main>
+
+
+    <footer>
+        
+    </footer>
 
 </body>
 </html>
