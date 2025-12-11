@@ -11,6 +11,7 @@
     --light-red : #ff768d;
     --white : #FaFaFa;
     --pink : #FEE9DE;
+    --light-pink:#FFDDCC;
     --yellow : #F2C94C;
     --navy : #010F1C;
 
@@ -48,6 +49,18 @@ html {
     }
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 10px;
+}
 
 /* Browser compatibility:
 ::selection - Standard (works in Chrome, Safari, Edge, etc.)
@@ -84,7 +97,7 @@ img,button{
     user-select: none;
 }
 
-a,button{
+a,button,input{
     all: unset;
 }
 
@@ -96,6 +109,10 @@ h1, h2, h3 ,span{
   font-weight: 700;
     font-family: 'Rubik', sans-serif;
     font-weight: 700; /* Or 600/800 depending on your design */
+}
+
+a,button{
+    cursor: pointer;
 }
 
 p.light {
@@ -634,4 +651,226 @@ header{
     font-size: 0.7em;
     font-weight: 700;
     z-index: 3;
+}
+
+
+
+.get-app{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-pink);
+    padding-inline: 48px;
+    padding-block: 64px;
+    border-radius: 16px;
+}
+
+.get-app .left-app{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 35%;
+}
+
+
+.get-app .left-app h4{
+    color: var(--red);
+    margin-bottom: 1em;
+}
+
+.get-app .left-app h2{
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.get-app .left-app p{
+    margin-bottom: 1.5em;
+}
+
+
+.get-app-btn{
+    background-color: var(--red);
+    padding-inline: 24px;
+    padding-block: 16px;
+    color: var(--white);
+    border-radius: 24px;
+}
+
+.mid-app{
+    width: 20%;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 8px;
+    gap: 16px;
+    width: 50%;
+    padding-block: 16px;
+    padding-inline: 8px;
+    color: var(--white);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.box-circle {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px;
+    padding: 4px; 
+}
+
+.box-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.right-app{
+    width: 40%;
+}
+
+
+.call-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 12px;
+    padding-block: 12px;
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); */
+    border-radius: 32px;
+    /* position: absolute; */
+    bottom: 20%;
+    left: 0%;
+    background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 48px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.left-foot{
+    width: 20%;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.5em;
+}
+
+.left-foot p{
+    font-size: 0.8em;
+    margin-bottom: 2em;
+}
+
+.right-foot{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 0.5em;
+}
+
+.ul{
+    width: 25%;
+}
+
+
+.ul .title-ul{
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    opacity: 1;
+}
+
+
+.ul div{
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    opacity: 0.9;
+}
+
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    width: 40%;
+    color: var(--red);
+}
+
+.ul button{
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor:default;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.ul button input{
+    padding: 4px;
+    font-size: 0.8em;
+    opacity: 1;
+}
+
+.ul button i{
+    color: var(--red);
 }
