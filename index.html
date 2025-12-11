@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>BITEDASH</title> 
     
     <meta name="description" content="BiteDash landing page">
@@ -186,6 +187,10 @@
         </div>
     </section>
 
+    <section class="work-with-us" >
+        <button onclick="showRegisterForm()">WANNA WORK WITH US?</button>
+    </section>
+    
     <!-- <section class="get-app">
         <div class="left-app">
             <h4>DOWNLOAD APP</h4>
@@ -227,6 +232,57 @@
     </section> -->
 
 </main>
+
+
+<div class="overlay"></div>
+
+<section class="register-form">
+    <button class="close-btn" onclick="hideRegisterForm()">&times;</button>
+    <div class="register-form-title">START WORKING NOW</div>
+    
+    <form class="form-container" 
+        hx-post="http://localhost:3000/api/apply/createApply"
+        hx-encoding="multipart/form-data"
+        hx-target="#form-message"
+        hx-swap="innerHTML"
+        onsubmit="return validateForm()">
+        
+            
+        <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="image">Profile Image</label>
+            <input type="file" id="image" name="file" accept="image/*" style="display:none;">
+            
+            <div class="file-upload-area" id="uploadTrigger">
+                <span id="fileName">Click to upload image</span>
+            </div>
+            
+            <div class="image-preview-container" id="imagePreviewContainer">
+                <div class="image-preview" id="imagePreview"></div>
+                <button type="button" class="remove-image-btn" id="removeImageBtn">× Remove</button>
+            </div>
+        </div>
+        
+        <div id="form-message"></div>
+
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">SUBMIT</span>
+            <span class="htmx-indicator" style="display:none;">
+                <span class="spinner"></span> Processing...
+            </span>
+        </button>
+    </form>
+</section>
 
 
     <footer>
@@ -286,5 +342,6 @@
         </div>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>

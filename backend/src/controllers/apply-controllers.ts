@@ -3,6 +3,7 @@ import { createApplyService } from "../services/apply-services";
 import validateApply from "../utils/validation/validate-apply";
 import { MulterRequest } from "../types/multer-request";
 import { ApplyInput } from "../types/apply";
+import fs from "fs";
 
 async function createApply(req: MulterRequest, res: Response) {
   try {
@@ -37,7 +38,17 @@ async function createApply(req: MulterRequest, res: Response) {
       success: true,
       data: application,
     });
-  } catch (e) {
+  } catch (e : any) {
+    console.log("Error in createApply controller:", e);
+
+      if (req.file) {
+        try {
+          fs.unlinkSync(req.file.path);
+        } catch (err) {
+          console.error("Failed to delete file:", err);
+        }
+      }
+
     console.log("Error in createApply controller:", e);
     return res.status(500).json({
       success: false,
