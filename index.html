@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="reponsive.css">
     <title>BITEDASH</title> 
     
     <meta name="description" content="BiteDash landing page">
@@ -32,29 +33,50 @@
 </head>
 
 <body>
-    <header>
-        <div class="left-head">
-            <div class="logo">
-                <span class="logo-letter">F</span>
-                <span class="logo-letter">O</span>
-                <span class="logo-letter">O</span>
-                <span class="logo-letter">D</span>
-            </div>
-
-            <h3 class="h3-logo">BiteDash</h3>
+<header>
+    <div class="left-head">
+        <div class="logo">
+            <span class="logo-letter">F</span>
+            <span class="logo-letter">O</span>
+            <span class="logo-letter">O</span>
+            <span class="logo-letter">D</span>
         </div>
+        <h3 class="h3-logo">BiteDash</h3>
+    </div>
 
-        <nav class="middle-head">
+    <nav class="middle-head">
+        <a href="#why-bd">Why BD?</a>
+        <a href="#">Services</a>
+        <a href="#">Menu</a>
+        <a href="#">Work</a>
+    </nav>
+
+    <div class="end-head">
+        <button class="contact-btn"><i class="fa-regular fa-envelope"></i> Contact</button>
+    </div>
+
+    <button class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="mobile-nav">
+        <!-- <button class="close-btn">
+            <i class="fa-solid fa-times"></i>
+        </button> -->
+        
+        <div class="mobile-nav-links">
             <a href="#why-bd">Why BD?</a>
             <a href="#">Services</a>
             <a href="#">Menu</a>
             <a href="#">Work</a>
-        </nav>
-
-        <div class="end-head">
-            <button class="contact-btn"><i class="fa-regular fa-envelope"></i> Contact</button>
+            <button class="mobile-contact-btn">
+                <i class="fa-regular fa-envelope"></i> Contact
+            </button>
         </div>
-    </header>
+    </div>
+</header>
 
     <main>
         
@@ -116,7 +138,6 @@
     
     <section class="why-db" id="why-bd">
         <h4>WHAT WE SERVE</h4>
-
         <h2>Your Favourite Food Delivery Partner</h2>
 
         <div class="images">
@@ -137,9 +158,14 @@
                 <div class="title-im">Best Quality</div>
                 <div class="des-im">Not only fast—quality is also our number one priority</div>
             </div>            
-
+        </div>
+        
+        <div class="slider-controls">
+            <button class="slider-prev">‹</button>
+            <button class="slider-next">›</button>
         </div>
     </section>
+
 
     <section class="about-us" >
         <div class="left-about-us">
@@ -340,6 +366,8 @@
             </div>
         </div>
     </footer>
+
+
 
 </body>
 </html>

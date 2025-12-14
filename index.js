@@ -334,3 +334,58 @@ document.addEventListener('DOMContentLoaded', function() {
 window.showRegisterForm = showRegisterForm;
 window.hideRegisterForm = hideRegisterForm;
 window.resetRegisterForm = resetForm;
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeBtn = document.querySelector('.mobile-nav .close-btn');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+    const mobileContactBtn = document.querySelector('.mobile-contact-btn');
+    
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    if (mobileNavLinks) {
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+    
+
+    if (mobileContactBtn) {
+        mobileContactBtn.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    if (mobileNav) {
+        mobileNav.addEventListener('click', function(e) {
+            if (e.target === mobileNav) {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
+
