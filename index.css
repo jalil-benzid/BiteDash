@@ -2019,7 +2019,6 @@ i{
 
 
 /************************************************/
-
 .why-db {
     padding: 4rem 1rem;
     text-align: center;
@@ -2031,13 +2030,17 @@ i{
     color: var(--red);
     font-size: 1.2em;
     margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .why-db h2 {
     font-size: 2.5em;
     line-height: 1.3;
-    margin-bottom: 2em;
+    margin-bottom: 3rem;
+    font-weight: 700;
 }
+
 
 .images {
     display: flex;
@@ -2048,45 +2051,46 @@ i{
     margin: 0 auto;
 }
 
-
 .card {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 8px;
     margin-bottom: 1.5rem;
 }
 
 .card .title-im {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 0.8em;
-    color: #333;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    color: #222;
 }
 
 .card .des-im {
-    font-size: 1em;
+    font-size: 0.95em;
     color: #666;
     line-height: 1.5;
+    margin: 0;
 }
 
 
-@media (max-width< 768px) {
+@media (min-width: 768px) {
     .images {
         flex-direction: row;
         flex-wrap: wrap;
@@ -2098,15 +2102,22 @@ i{
     .card {
         width: calc(50% - 1rem);
         max-width: none;
+        padding: 1.8rem;
+        height: auto;
+        min-height: 380px; /* Consistent height */
+        display: flex;
+        flex-direction: column;
     }
-
+    
+    .card img {
+        height: 160px;
+    }
+    
     .why-db h2 {
-        font-size: 1em !important; 
-        line-height: 0;
-        margin-bottom: 2em;
+        font-size: 2.2em;
+    }
 }
 
-}
 
 @media (min-width: 1024px) {
     .images {
@@ -2117,10 +2128,77 @@ i{
     
     .card {
         width: calc(33.333% - 1.5rem);
+        padding: 2rem;
+        min-height: 400px;
     }
     
+    .card img {
+        height: 170px;
+    }
+    
+    .card .title-im {
+        font-size: 1.4em;
+    }
+    
+    .card .des-im {
+        font-size: 1em;
+    }
 }
 
+
+@media (max-width: 767px) {
+    .why-db {
+        padding: 3rem 1rem;
+    }
+    
+    .why-db h2 {
+        font-size: 2em;
+        margin-bottom: 2.5rem;
+    }
+    
+    .card {
+        max-width: 340px;
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    .card img {
+        height: 160px;
+    }
+    
+    .card .title-im {
+        font-size: 1.2em;
+    }
+    
+    .card .des-im {
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .why-db {
+        padding: 2.5rem 1rem;
+    }
+    
+    .why-db h2 {
+        font-size: 1.8em;
+        margin-bottom: 2rem;
+    }
+    
+    .card {
+        padding: 1.2rem;
+        max-width: 300px;
+    }
+    
+    .card img {
+        height: 140px;
+    }
+    
+    .images {
+        gap: 2rem;
+    }
+}
 
 /*********************/
 

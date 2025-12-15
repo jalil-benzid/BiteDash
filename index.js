@@ -389,3 +389,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+function sendToEmail() {
+    const email = document.getElementById('newsletter-email').value;
+    if(email) {
+        window.location.href = `mailto:newsletter@bitedash.com?subject=Newsletter Subscription&body=Please subscribe me: ${email}`;
+    }
+}

@@ -46,13 +46,13 @@
 
     <nav class="middle-head">
         <a href="#why-bd">Why BD?</a>
-        <a href="#">Services</a>
-        <a href="#">Menu</a>
-        <a href="#">Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="end-head">
-        <button class="contact-btn"><i class="fa-regular fa-envelope"></i> Contact</button>
+        <button class="contact-btn" onclick="window.location.href='mailto:doesnotexist@example.com'"><i class="fa-regular fa-envelope"></i> Email</button>
     </div>
 
     <button class="hamburger-btn">
@@ -68,11 +68,11 @@
         
         <div class="mobile-nav-links">
             <a href="#why-bd">Why BD?</a>
-            <a href="#">Services</a>
+            <a href="#about-us">About Us</a>
             <a href="#">Menu</a>
             <a href="#">Work</a>
-            <button class="mobile-contact-btn">
-                <i class="fa-regular fa-envelope"></i> Contact
+            <button class="mobile-contact-btn" onclick="window.location.href='mailto:doesnotexist@example.com'">
+                <i class="fa-regular fa-envelope"></i> Email
             </button>
         </div>
     </div>
@@ -93,9 +93,14 @@
             <h4 class="hero-des">Our job is to fill your tummy with delicious food</h4>
 
             <div class="explore">
-                <a href="#" class="hero-start-btn">Get Started</a>
+                <a href="https://play.google.com/store/apps/details?id=com.yourcompany.bitedash" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="hero-start-btn">
+                    Get Started
+                </a>
 
-                <a href="#" class="hero-video-btn">
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" class="hero-video-btn">
                     <div class="logo-vid">
                         <i class="fas fa-play"></i>
                     </div>
@@ -160,7 +165,7 @@
         </div>
     </div>
 </section>
-    <section class="about-us" >
+    <section class="about-us" id="reviews">
         <div class="left-about-us">
             <img class="chef" src="./assets/chef.webp" alt="chef">
             <div class="reviews">
@@ -205,7 +210,7 @@
         </div>
     </section>
 
-    <section class="work-with-us" >
+    <section class="work-with-us" id="work">
         <button onclick="showRegisterForm()">WANNA WORK WITH US?</button>
     </section>
     
@@ -303,7 +308,7 @@
 </section>
 
 
-    <footer>
+    <footer id="contact">
         <div class="left-foot">
             <div class="footer-logo">
             <div class="logo">
@@ -318,12 +323,19 @@
 
             <p>Our job is to filling your tummy with delicious food and with fast and free delivery.</p>
 
-            <div class="links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-            </div>
+        <div class="links">
+            <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter"></i>
+            </a>
         </div>
+
+</div>
 
         <div class="right-foot">
             <div class="ul">
@@ -352,10 +364,11 @@
                 <div class="title-ul">Get in Touch</div>
                 <div>Question or feedback?</div>
                 <div>We'd love to hear from you</div>
-                <button>
-                    <input type="email" placeholder="Email Address">
-                    <i class="far fa-paper-plane"></i>
-                </button>
+            <button onclick="window.location.href='mailto:info@bitedash.com'">
+                <input type="email" placeholder="Email Address" readonly>
+                <i class="far fa-paper-plane"></i>
+            </button>
+
             </div>
         </div>
     </footer>
